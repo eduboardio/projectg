@@ -16,5 +16,4 @@ spec:
         - name: eduboardioprojectg 
           image: ebimages.azurecr.io/eduboardioprojectg
           ports:
-          - port: 4444
           - containerPort: 8080

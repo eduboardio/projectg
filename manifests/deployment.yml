@@ -17,3 +17,4 @@ spec:
           image: ebimages.azurecr.io/eduboardioprojectg
           ports:
           - containerPort: 8080
+          - targetPort: 4444

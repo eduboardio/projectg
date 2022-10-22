@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: eduboardioprojectg 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eduboardioprojectg
+  template:
+    metadata:
+      labels:
+        app: eduboardioprojectg 
+    spec:
+      containers:
+        - name: eduboardioprojectg 
+          image: ebimages.azurecr.io/eduboardioprojectg
+          ports:
+          - containerPort: 8080

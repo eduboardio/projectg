@@ -15,6 +15,7 @@ router.post("/signup", (req, res) => {
     email: data.email,
     password: data.password,
     type: data.type,
+    name: data.name,
   });
 
   user
@@ -24,12 +25,12 @@ router.post("/signup", (req, res) => {
         user.type == "recruiter"
           ? new Recruiter({
               userId: user._id,
-              name: data.name,            
-          })
+              name: data.name,
+            })
           : new JobApplicant({
               userId: user._id,
-              name: data.name,            
-          });
+              name: data.name,
+            });
 
       userDetails
         .save()
@@ -75,6 +76,7 @@ router.post("/login", (req, res, next) => {
       res.json({
         token: token,
         type: user.type,
+        name: user.name,
       });
     }
   )(req, res, next);

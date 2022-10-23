@@ -24,10 +24,12 @@ router.post("/signup", (req, res) => {
         user.type == "recruiter"
           ? new Recruiter({
               userId: user._id,
-            })
+              name: data.name,            
+          })
           : new JobApplicant({
               userId: user._id,
-            });
+              name: data.name,            
+          });
 
       userDetails
         .save()

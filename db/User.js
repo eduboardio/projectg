@@ -19,6 +19,10 @@ let schema = new mongoose.Schema(
       enum: ["recruiter", "applicant"],
       required: true,
     },
+    name: {
+      type: String,
+      required: true,
+    },
   },
   { collation: { locale: "en" } }
 );

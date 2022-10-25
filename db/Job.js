@@ -14,6 +14,14 @@ let schema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    location: {
+      type: [String],
+      required: true,
+    },
+    department: {
+      type: [String],
+      required: true,
+    },
     maxApplicants: {
       type: Number,
       validate: [
@@ -94,10 +102,6 @@ let schema = new mongoose.Schema(
     skillsets: [String],
     jobType: {
       type: String,
-      required: true,
-    },
-    location: {
-      type: [String],
       required: true,
     },
     duration: {

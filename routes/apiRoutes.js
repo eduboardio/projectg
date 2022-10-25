@@ -29,6 +29,7 @@ router.post("/jobs", jwtAuth, (req, res) => {
     title: data.title,
     description: data.description,
     location: data.location,
+    department: data.department,
     maxApplicants: data.maxApplicants,
     maxPositions: data.maxPositions,
     dateOfPosting: data.dateOfPosting,

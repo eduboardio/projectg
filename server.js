@@ -8,7 +8,7 @@ const fs = require("fs");
 // MongoDB
 mongoose
   .connect(
-    "mongodb://pg-aks-mongodb:UrRPSH6aFGYh5GPkPpFA5tU0y8e5PrT45erQZwMoJ6PHQ6we8Ok7hwGqdP7OPsY0QsL621qcqzKQACDb95e1AA==@pg-aks-mongodb.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&maxIdleTimeMS=120000&appName=@pg-aks-mongodb@",
+    "mongodb+srv://eduboard:eduboard123@jobportal.cpamair.mongodb.net/?retryWrites=true&w=majority",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
